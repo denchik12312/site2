@@ -108,7 +108,216 @@ body {
     text-align: center;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+.about-content {
+    position: relative;
+    margin-top: 5vh;
+    margin-left: 10vh;
+    height: 75vh;
+    width: 88vw; /* Ширина блока */
+    max-width: 88vw; /* Максимальная ширина */
+    min-width: 300px; /* Минимальная ширина */
+    background-color: #fff;
+    border-radius: 50px;
+    box-shadow: 5px 5px 20px rgb(189, 155, 221);
+    display: flex;
+    flex-direction: column; /* Вертикальное размещение */
+    align-items: start;
+    justify-content: space-between; /* Пространство между элементами */
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
 
+.about-content .about-one {
+    position: absolute;
+    margin: 5vh;
+    height: 65vh;
+    width: 45%;
+    background-color: #fff;
+    border-radius: 50px;
+    box-shadow: 5px 5px 20px rgb(189, 155, 221);
+    display: flex;
+    flex-direction: column; /* Вертикальное размещение */
+    align-items: start;
+    justify-content: space-between; /* Пространство между элементами */
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    transition: all 0.5s ease-in-out;
+}
+.about-one.fullscreen {
+    margin: 0;
+    width: 100%; /* Ширина экрана */
+    height: 100%; /* Высота экрана */
+    position: absolute; /* Чтобы элемент занимал весь экран */
+    z-index: 1000; /* Поверх остальных элементов */
+    background-color: white; /* Цвет фона для полноэкранного режима */
+    display: flex;
+    flex-direction: column; /* Вертикальное размещение */
+    align-items: center;
+    justify-content: space-between; /* Пространство между элементами */
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.about-one h1 {
+    align-self: center;
+    text-align: center;
+    color: rgb(90, 66, 196);
+}
+.about-content .about-two {
+    position: absolute;
+    margin-top: 5vh;
+    margin-left: 52.5%;
+    height: 65vh;
+    width: 45%;
+    background-color: #fff;
+    border-radius: 50px;
+    box-shadow: 5px 5px 20px rgb(189, 155, 221);
+    display: flex;
+    flex-direction: column; /* Вертикальное размещение */
+    align-items: center;
+    justify-content: space-between; /* Пространство между элементами */
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;   
+    transition: all 0.5s ease-in-out;
+}
+.about-two.fullscreen {
+    margin: 0;
+    width: 100%; /* Ширина экрана */
+    height: 100%; /* Высота экрана */
+    position: absolute; /* Чтобы элемент занимал весь экран */
+    z-index: 1000; /* Поверх остальных элементов */
+    background-color: white; /* Цвет фона для полноэкранного режима */
+}
+
+.about-two h1 {
+    align-self: center;
+    text-align: center;
+    color: rgb(90, 66, 196);
+}
+
+.about-two.fullscreen img {
+    opacity: 0;
+    visibility: hidden;
+    margin: 0;
+    width: 100%; /* Ширина экрана */
+    height: 100%; /* Высота экрана */
+    opacity: 0;
+    position: absolute; /* Чтобы элемент занимал весь экран */
+    z-index: 0; /* Поверх остальных элементов */
+    background-color: white; /* Цвет фона для полноэкранного режима */
+}
+
+.about-two.fullscreen img,
+.about-two.fullscreen p {
+    font-size: 0px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out
+}
+
+.about-one-button {
+    position: absolute;
+    height: 65vh;
+    width: 100%;
+    background-color: #fff;
+    border: none;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column; /* Вертикальное размещение */
+    align-items: center;
+    justify-content: center; /* Пространство между элементами */
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgba(90, 66, 196, 1);
+    transition: opacity 1s, color 1s;
+    font-size: 24px;
+    z-index:5;
+}
+
+
+.about-one img {
+    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+    position: absolute;
+    height: 65vh;
+    border-radius: 50px;
+    width: 100%;
+    z-index: 3;
+    opacity : 1;
+    visibility: visible;
+}
+.about-one.fullscreen img {
+    opacity: 0;
+    visibility: hidden;
+    margin: 0;
+    width: 100%; /* Ширина экрана */
+    height: 100%; /* Высота экрана */
+    opacity: 0;
+    position: absolute; /* Чтобы элемент занимал весь экран */
+    z-index: 0; /* Поверх остальных элементов */
+    background-color: white; /* Цвет фона для полноэкранного режима */
+}
+.about-one-button:hover {
+    opacity: 0%;
+    color: rgba(0, 0, 0, 0);
+}
+.about-two-button {
+    position: absolute;
+    height: 65vh;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 50px;
+    border: none;
+    display: flex;
+    flex-direction: column; /* Вертикальное размещение */
+    align-items: center;
+    justify-content: center; /* Пространство между элементами */
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;   
+    color: rgba(90, 66, 196, 1);
+    transition: opacity 1s, color 1s;
+    font-size: 24px;
+    z-index: 5;
+
+}
+.about-two img {
+    position: absolute;
+    height: 65vh;
+    border-radius: 50px;
+    width: 100%;
+    z-index: 3;
+}
+.about-two-button:hover {
+    opacity: 0%;
+    color: rgba(0, 0, 0, 0);
+}
+
+.about-one p {
+    position: absolute;
+    z-index: 4;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+    font-size: 48px;
+    color: rgb(240, 240, 240);
+    align-self: center;
+    margin-top: 70%;
+    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+    opacity: 1;
+    visibility: visible;
+}
+
+.about-one.fullscreen p {
+    font-size: 0px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out
+}
+.about-two p {
+    position: absolute;
+    z-index: 4;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+    font-size: 48px;
+    color: rgb(240, 240, 240);
+    align-self: center;
+    margin-top: 70%;
+}
 
 .get-started {
     display: grid;

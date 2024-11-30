@@ -25,14 +25,28 @@
         </nav>
     </header>
     <main> 
-        <div class = 'main-content'>
-            <div class = 'get-started'>
-                <h1>Начните свое увлекательное путешествие в мир игр прямо сейчас!</h1>
-                <p class="p1">На нашем сайте вы сможете погрузиться в мир интересных интернет-игр</p>
-                <p class="p2">абсолютно бесплатно!</p>
-                <p class="p3">Вы можете ознакомиться с каталогом наших игр и начать в них играть после регистрации.</p>
-            <div class="get-started-button"><a href="hub.html">Приступить к игре!</a></div>
+        <div class = 'about-content'>
+            <div class = 'about-one' id ='about-one'>
+                <img class = 'about-one-img' id ='about-one-img' src ='other/hamster.jpg'>
+                <p class = 'about-one-p' id ='about-one-p'>Дэнчик</p>
+                <div class = 'about-two-text'>
+                    <h1>Что можно сказать про Дэнчика?</h1>
+                    <h2>Дэнчик так-то нормальный пацан, 17 лет, день рождения в сентябре, впринципе хамстер полнейший.</h2>
+                </div>
+                <button class = 'about-one-button' onclick="make_him_big1()">СКРЫТО, НАВЕДИСЬ ЧТОБЫ УВИДЕТЬ
+
+                </button>
             </div>
+            <div class = 'about-two' id ='about-two'>
+                <img class = 'about-two-img' id ='about-two-img' src = 'other/paveldurov.jpg'>
+                <p class = 'about-two-p' id ='about-two-p'>Илюха</p>
+                <div class = 'about-two-text'>
+                    <h1>Что можно сказать про Илюху?</h1>
+                    <h2>Илюха так-то нормальный пацан, 17 лет, кумир Павла Дурова</h2>
+                </div>    
+                <button class = 'about-two-button' onclick="make_him_big2()">СКРЫТО, НАВЕДИСЬ ЧТОБЫ УВИДЕТЬ</button>
+            </div>
+            
         </div>
         
     </main>
@@ -44,7 +58,7 @@
             <div class = 'gr4'>grid4</div>
         </div>
     </footer>
-
+    <script src="bigger.js"></script>
     <script src="loader.js"></script>
 </body>
 </html>
