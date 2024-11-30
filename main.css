@@ -650,3 +650,137 @@ body {
         font-size: 18px;
     }
 }
+<<<<<<< HEAD
+.update-content{
+    position: relative;
+    margin-top: 10vh;
+    /* margin-left: 10vh; */
+    margin-right: 10vh;
+    height: 65vh;
+    width: 100%; /* Ширина блока */
+    /* max-width: 1350px; Максимальная ширина */
+    /* min-width: 300px; Минимальная ширина */
+    background-color: #fff;
+    /* border-radius: 50px; */
+    box-shadow: 5px 5px 20px rgb(189, 155, 221);
+    /* padding: 20px; */
+    display: flex;
+    flex-direction: column; /* Вертикальное размещение */
+    justify-content: space-between; /* Пространство между элементами */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    overflow: auto;
+}
+.update-content::-webkit-scrollbar {
+    width: 8px; /* Ширина полосы прокрутки */
+    
+  }
+  
+  /* Уменьшаем размер ползунка (thumb) */
+.update-content::-webkit-scrollbar-thumb {
+    background-color: rgb(189, 155, 221); /* Цвет ползунка */
+    border-radius: 4px; /* Закругленные углы */
+    transform: translateX(-10px);/* Уменьшаем высоту ползунка */
+  }
+  
+  /* Стили для фона скроллбара */
+.update-content::-webkit-scrollbar-track {
+    background-color: #fff; /* Цвет трека (фона) скроллбара */
+  }
+.block{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    padding-top: 10px;
+    margin-left: 10vh;
+    gap: 5vh;
+    
+}
+.block-1{
+    border: 2px solid rgb(245, 242, 242);
+    box-shadow: 2px 2px 16px rgb(174, 174, 174)  ;
+    border-radius: 20px;
+    width: 95%;
+    height: 25vh;
+   
+}
+.block-2{
+ border: 2px solid rgb(245, 242, 242);
+    box-shadow: 2px 2px 16px rgb(174, 174, 174)  ;
+    border-radius: 20px;
+    width: 95%;
+    height: 25vh;
+   
+}
+.block-3{
+    border: 2px solid rgb(245, 242, 242);
+    box-shadow: 2px 2px 16px rgb(174, 174, 174)  ;
+    border-radius: 20px;
+    width: 95%;
+    height: 25vh;
+}
+.block-4{
+    border: 2px solid rgb(245, 242, 242);
+    box-shadow: 2px 2px 16px rgb(174, 174, 174)  ;
+    border-radius: 20px;
+    width: 95%;
+    height: 25vh;
+}
+.blockinf{
+    display: grid;
+    grid-template-columns: repeat(2, 30% 69%);
+    height: 5vh;
+    
+    /* border: 2px solid rgb(245, 242, 242);
+    box-shadow: 2px 2px 16px rgb(174, 174, 174)  ; */
+
+    margin: 1vh;
+    gap: 1vh;
+}
+.infdate{
+    border: 2px solid rgb(245, 242, 242);
+    box-shadow: 1px 1px 160px rgb(250, 238, 238)  ;
+    border-radius: 5px;
+    align-items: center;
+    text-align: center;
+    padding: 1vh;
+}
+.inftext{
+    border: 2px solid rgb(245, 242, 242);
+    box-shadow: 1px 1px 160px rgb(250, 238, 238)  ;
+    border-radius: 5px;
+    padding-left: 10px;
+    align-items: center;
+    text-align: center;
+    padding: 1vh;
+    
+}
+@media (max-width: 575.98px)  {
+    .infdate p {
+        font-size: 15px;
+        padding-top: 5px;
+        
+    
+        
+    }
+    .inftext p {
+        font-size: 15px;
+        padding-top: 5px;
+        
+    }
+    .update-content{
+        left: -62px;
+    }
+    .block{
+       display: grid;
+       grid-template-columns: repeat(1,1fr);
+       position: absolute;
+       width: 80%;
+       left: -10px;
+       
+    }
+
+}
+
+
+
+=======
+>>>>>>> 63cc6ff61a6d213de7b901d59063819785655f8f
