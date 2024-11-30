@@ -5,73 +5,99 @@
 
 body {
     background-color: rgb(230, 230, 230);
+    overflow-x: hidden;
 }
 .headerline {
-    position: fixed;
+    position: relative;
     display: flex;
     background-color: rgb(240, 240, 240);
-    height: 7vh;
-    width: 100vw;
-    border-bottom: 3px rgb(226, 226, 226) solid;
+    height: auto; /* Позволяет высоте подстраиваться */
+    width: 100vw; /* Гарантирует, что не выйдет за пределы экрана */
+    border-bottom: 2px rgb(226, 226, 226) solid;
     z-index: 1000;
     box-shadow: 5px 5px 15px rgb(189, 155, 221);
-    
+    flex-wrap: wrap; /* Разрешает перенос кнопок при необходимости */
+    padding: 10px;
+    justify-content: space-between; /* Пространство между элементами */
+    align-items: center; /* Вертикальное выравнивание */
 }
 .headerline .mainbutton {
-    position: relative;
+    position: absolute;
+    height: 7vh;
+    width: 10vw;
     max-height: 7vh;
     max-width: 10vw;
-    grid-column: 1;
-    grid-row: 1;
+    z-index: 10002;
 }
 .mainbutton .mainlink img {
     height: 7vh;
-    width: 25vh;
+    width: 10vw;
+    max-height: 7vh;
+    max-width: 10vw;
+    z-index: 10001;
 
 }
 .headerline .other-buttons {
     position: relative;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 101px;
-    grid-auto-rows: minmax(100px, auto);
-    margin-top: 1.8vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100vw;
+    height: 7vh;
+    gap: 100px;
+    margin-bottom: 1vh;
+    padding-right: 10px;
+    z-index: 10001;
+}
+.other-buttons a {
+    display: block; /* Делает ссылку блочной, чтобы она занимала всю ширину */
+    padding: 10px 2%;
+    color: rgb(122, 9, 187);
+    width: 10vw;
+    height: 3vh;
+    max-width: 150px;
+    min-width: 80px;
+    text-align: center; /* Центрирование текста */
+    border: 2px rgb(226, 226, 226) solid;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, scale 0.3s ease, color 0.3s ease;
+    box-shadow: 5px 5px 15px rgb(189, 155, 221);
+    text-decoration: none; /* Убирает подчеркивание */
+    flex: 1 1 auto;
+    white-space: nowrap;
     margin-right: 1vw;
-    margin-left: 35vh;
 }
-.headerline .other-buttons .games {
-    grid-column: 1;
-    grid-row: 1;
+.other-buttons a:hover {
+    background-color: rgba(122, 9, 187, 0.5);
+    color: rgb(240, 240, 240);
+    scale: 1.05;
 }
-.headerline .other-buttons .update-log {
-    grid-column: 2;
-    grid-row: 1;
-}
-.headerline .other-buttons .about {
-    grid-column: 3;
-    grid-row: 1;
-}
-.headerline .other-buttons .donate {
-    grid-column: 4;
-    grid-row: 1;
-}
-.headerline .other-buttons .hub {
-    grid-column: 5;
-    grid-row: 1;
+
+.hub {
+    
 }
 
 .main-content {
-    position: absolute;
-    
+    position: relative;
     margin-top: 25vh;
-    background-color: rgb(240, 240, 240);
+    margin-left: 10vh;
     height: 40vh;
-    width: 50vw;
-    margin-left: 7vw;
-    border: 2px solid rgb(226, 226, 226);
+    width: 80%; /* Ширина блока */
+    max-width: 800px; /* Максимальная ширина */
+    min-width: 300px; /* Минимальная ширина */
+    background-color: #fff;
     border-radius: 50px;
-    box-shadow: 5px 5px 15px rgb(189, 155, 221);
-    padding: 25px;
+    box-shadow: 5px 5px 20px rgb(189, 155, 221);
+    padding: 20px;
+    display: flex;
+    flex-direction: column; /* Вертикальное размещение */
+    align-items: center;
+    justify-content: space-between; /* Пространство между элементами */
+    text-align: center;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .get-started {
@@ -87,6 +113,7 @@ body {
     margin-bottom: 1vh;
 }
 .get-started p {
+    text-align: left;
     font-size: 16px;
     font-weight: normal;
     color: rgb(90, 66, 196);
@@ -100,15 +127,48 @@ body {
 }
 .get-started-button {
     position: absolute;
-    bottom: 1vh;
-    margin: 0 auto;
-    border: 2px solid rgb(226, 226, 226);
-    box-shadow: 5px 5px 15px rgb(189, 155, 221);
-    border-radius: 50px;
-    height: 10vh;
-    width: 50vw;
-
+    width: 80vw; /* Кнопка будет занимать всю ширину */
+    margin-top: 35vh; /* Прижимает кнопку к низу родителя */
+    max-width: 800px;
+    min-width: 300px;
 }
+
+.get-started-button a {
+    display: block; /* Делает ссылку блочной, чтобы она занимала всю ширину */
+    padding: 10px 20px;
+    background: linear-gradient(90deg,  #e73c7e, #23a6d5, #e73c7e);
+    background-size: 400% 400%;
+    color: #fff;
+    text-align: center; /* Центрирование текста */
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none; /* Убирает подчеркивание */
+    box-shadow: 5px 5px 15px rgb(189, 155, 221);
+    transition: scale 0.3s;
+}
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+.get-started-button a {
+    animation: gradient 10s ease infinite;
+    transform: translate3d(0, 0, 0);
+}
+.get-started-button a:hover {
+    scale: 1.01;
+}
+
+/* Анимация появления границы при наведении */
+
 
 .footerline {
     position: fixed;
@@ -126,4 +186,248 @@ body {
 }
 .footerline .gr1 {
 
+}
+
+
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8); /* Полупрозрачный фон */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Лоадер поверх всего */
+    visibility: visible; /* Видимость по умолчанию */
+    opacity: 1; /* Начальная прозрачность */
+    transition: opacity 1s ease, visibility 1s ease; /* Плавное исчезновение */
+}
+
+.spinner {
+    border: 8px solid #f3f3f3; /* Светлый цвет фона */
+    border-top: 8px solid #ff85ef; /* Синий цвет для части круга */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite; /* Круговое вращение */
+}
+
+/* Анимация вращения */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Скрытие лоадера после загрузки страницы */
+.loader.hidden {
+    visibility: hidden;
+    opacity: 0;
+}
+/* Основные стили остаются без изменений */
+
+/* Extra small (меньше 576px) */
+@media (max-width: 575.98px) {
+    .headerline {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+        padding: 10px;
+    }
+
+    .headerline .mainbutton img {
+        height: 0px;
+        width: 0px;
+    }
+
+    .headerline .other-buttons {
+        flex-wrap: wrap; /* Разрешаем перенос кнопок */
+        gap: 10px; /* Уменьшаем расстояние между кнопками */
+        justify-content: center; /* Центрируем кнопки */
+    }
+
+    .other-buttons a {
+        padding: 8px 5%;
+        font-size: 0.85rem;
+    }
+    .main-content {
+        margin: 5vh auto;
+        width: 90%;
+        padding: 15px;
+    }
+
+    .get-started h1 {
+        font-size: 22px;
+    }
+
+    .get-started p {
+        font-size: 14px;
+    }
+
+    .get-started-button a {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .footerline {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        padding: 10px;
+    }
+}
+
+/* Small (576px и больше) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+
+    .headerline .mainbutton img {
+        height: 0px;
+        width: 0px;
+    }
+
+    .headerline .other-buttons {
+        gap: 15px;
+        justify-content: center;
+    }
+
+    .other-buttons a {
+        padding: 10px 4%;
+        font-size: 0.9rem;
+    }
+
+    
+    .main-content {
+        width: 85%;
+    }
+
+    .get-started h1 {
+        font-size: 24px;
+    }
+
+    .get-started p {
+        font-size: 16px;
+    }
+
+    .get-started-button a {
+        font-size: 15px;
+    }
+
+    .footerline {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Medium (768px и больше) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .headerline .other-buttons {
+        gap: 20px;
+    }
+
+    .other-buttons a {
+        padding: 12px 5%;
+        font-size: 1rem;
+    }
+
+    .main-content {
+        width: 80%;
+    }
+
+    .get-started h1 {
+        font-size: 26px;
+    }
+
+    .get-started p {
+        font-size: 18px;
+    }
+
+    .get-started-button a {
+        font-size: 16px;
+    }
+
+    .footerline {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Large (992px и больше) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+
+    .headerline .other-buttons {
+        gap: 25px;
+    }
+
+    .other-buttons a {
+        padding: 14px 6%;
+        font-size: 1.1rem;
+    }
+
+    .main-content {
+        width: 75%;
+    }
+
+    .get-started h1 {
+        font-size: 28px;
+    }
+
+    .get-started p {
+        font-size: 18px;
+    }
+
+    .get-started-button a {
+        font-size: 16px;
+    }
+
+    .footerline {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Extra large (1200px и больше) */
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+
+    .other-buttons a {
+        padding: 15px 7%;
+        font-size: 1.2rem;
+    }
+
+    .main-content {
+        width: 70%;
+    }
+
+    .get-started h1 {
+        font-size: 30px;
+    }
+
+    .get-started p {
+        font-size: 20px;
+    }
+
+    .get-started-button a {
+        font-size: 18px;
+    }
+}
+
+/* Extra extra large (1400px и больше) */
+@media (min-width: 1400px) {
+
+    .other-buttons a {
+        padding: 16px 8%;
+        font-size: 1.3rem;
+    }
+
+    .main-content {
+        width: 65%;
+    }
+
+    .get-started h1 {
+        font-size: 32px;
+    }
+
+    .get-started p {
+        font-size: 20px;
+    }
+
+    .get-started-button a {
+        font-size: 18px;
+    }
 }
