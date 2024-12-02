@@ -512,6 +512,7 @@ body {
     .block{
        
        grid-template-columns: repeat(1,1fr);
+    }
     .about-content {
         margin-left: 10vw;
         width: 80vw;
@@ -567,6 +568,7 @@ body {
     }
     .update-content{
         left: -7vw;
+    }
     .about-content {
         margin-left: 10vw;
         width: 80vw;
@@ -614,7 +616,7 @@ body {
         margin-left:   10px;
     }
     .update-content{
-        left: -4vw;
+        left: -4vw;}
     .about-content {
         margin-left: 10vw;
         width: 70vw;
@@ -702,6 +704,7 @@ body {
     }
     .block{
         grid-template-columns: repeat(2,1fr);
+    }
     .about-content {
         margin-left: 10vw;
         width: 80vw;
@@ -739,10 +742,12 @@ body {
     }
     .block{
         grid-template-columns: repeat(2,1fr);
+    }
     .about-content {
         margin-left: 10vw;
         width: 80vw;
     }
+
     .about-content .about-one {
 
     }
@@ -750,6 +755,8 @@ body {
 
     }
 }
+
+
 .update-content{
     position: relative;
     margin-top: 10vh;
@@ -860,27 +867,3 @@ body {
     padding: 1vh;
     
 }
-
-/* .infdate p {
-    font-size: 15px;
-    padding-top: 5px;
-    
-
-    
-}
-.inftext p {
-    font-size: 15px;
-    padding-top: 5px;
-    
-}
-.update-content{
-    left: -62px;
-}
-.block{
-   display: grid;
-   grid-template-columns: repeat(1,1fr);
-   position: absolute;
-   width: 80%;
-   left: -10px;
-   
-} */
