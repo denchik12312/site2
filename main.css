@@ -111,9 +111,9 @@ body {
 .about-content {
     position: relative;
     margin-top: 5vh;
-    margin-left: 10vh;
+    margin-left: 10vw;
     height: 75vh;
-    width: 88vw; /* Ширина блока */
+    width: 80vw; /* Ширина блока */
     max-width: 88vw; /* Максимальная ширина */
     min-width: 300px; /* Минимальная ширина */
     background-color: #fff;
@@ -158,14 +158,14 @@ body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .about-one h1 {
+    justify-content: center;
     align-self: center;
     text-align: center;
     color: rgb(90, 66, 196);
 }
 .about-content .about-two {
     position: absolute;
-    margin-top: 5vh;
-    margin-left: 52.5%;
+    margin: 5vh;
     height: 65vh;
     width: 45%;
     background-color: #fff;
@@ -178,6 +178,7 @@ body {
     text-align: center;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;   
     transition: all 0.5s ease-in-out;
+    align-self: end;
 }
 .about-two.fullscreen {
     margin: 0;
@@ -494,6 +495,16 @@ body {
         gap: 10px;
         padding: 10px;
     }
+    .about-content {
+        margin-left: 10vw;
+        width: 80vw;
+    }
+    .about-content .about-one {
+        width: 30vw;
+    }
+    .about-content .about-two {
+        width: 30vw;
+    }
 }
 
 /* Small (576px и больше) */
@@ -534,6 +545,16 @@ body {
     .footerline {
         grid-template-columns: repeat(2, 1fr);
     }
+    .about-content {
+        margin-left: 10vw;
+        width: 80vw;
+    }
+    .about-content .about-one {
+        width: 30vw;
+    }
+    .about-content .about-two {
+        width: 30vw;
+    }
 }
 
 /* Medium (768px и больше) */
@@ -565,6 +586,16 @@ body {
 
     .footerline {
         grid-template-columns: repeat(3, 1fr);
+    }
+    .about-content {
+        margin-left: 10vw;
+        width: 70vw;
+    }
+    .about-content .about-one {
+        width: 28vw;
+    }
+    .about-content .about-two {
+        width: 28vw;
     }
 }
 
@@ -599,6 +630,17 @@ body {
     .footerline {
         grid-template-columns: repeat(4, 1fr);
     }
+    .about-content {
+        margin-left: 10vw;
+        width: 70vw;
+    }
+    .about-content .about-one {
+        width: 30vw;
+    }
+    .about-content .about-two {
+        width: 30vw;
+    }
+    
 }
 
 /* Extra large (1200px и больше) */
@@ -624,6 +666,16 @@ body {
     .get-started-button a {
         font-size: 18px;
     }
+    .about-content {
+        margin-left: 10vw;
+        width: 80vw;
+    }
+    .about-content .about-one {
+        width: 35vw;
+    }
+    .about-content .about-two {
+        width: 35vw;
+    }
 }
 
 /* Extra extra large (1400px и больше) */
@@ -648,6 +700,16 @@ body {
 
     .get-started-button a {
         font-size: 18px;
+    }
+    .about-content {
+        margin-left: 10vw;
+        width: 80vw;
+    }
+    .about-content .about-one {
+
+    }
+    .about-content .about-two {
+
     }
 }
 .update-content{
