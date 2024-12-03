@@ -433,339 +433,16 @@ body {
     height: 50px;
     animation: spin 1s linear infinite; /* Круговое вращение */
 }
-
-/* Анимация вращения */
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
-
-/* Скрытие лоадера после загрузки страницы */
-.loader.hidden {
-    visibility: hidden;
-    opacity: 0;
-}
-/* Основные стили остаются без изменений */
-
-/* Extra small (меньше 576px) */
-@media (max-width: 575.98px) {
-    .headerline {
-        flex-direction: column;
-        align-items: flex-start;
-        height: auto;
-        padding: 10px;
-    }
-
-    .headerline .mainbutton img {
-        height: 0px;
-        width: 0px;
-    }
-
-    .headerline .other-buttons {
-        flex-wrap: wrap; /* Разрешаем перенос кнопок */
-        gap: 10px; /* Уменьшаем расстояние между кнопками */
-        justify-content: center; /* Центрируем кнопки */
-    }
-
-    .other-buttons a {
-        padding: 8px 5%;
-        font-size: 0.85rem;
-    }
-    .main-content {
-        margin: 5vh auto;
-        width: 90%;
-        padding: 15px;
-    }
-
-    .get-started h1 {
-        font-size: 22px;
-    }
-
-    .get-started p {
-        font-size: 14px;
-    }
-
-    .get-started-button a {
-        font-size: 14px;
-        padding: 10px;
-    }
-
-    .footerline {
-        grid-template-columns: 1fr;
-        gap: 10px;
-        padding: 10px;
-    }
-    .infdate p {
-        font-size: 15px;
-        padding-top: 5px;
-        
-    }
-    .inftext p {
-        font-size: 15px;
-        padding-top: 5px;
-    
-    }
-    .update-content{
-        left: -12vw;
-        
-    }
-    .block{
-       
-       grid-template-columns: repeat(1,1fr);
-    }
-    .about-content {
-        margin-left: 10vw;
-        width: 80vw;
-    }
-    .about-content .about-one {
-        width: 30vw;
-    }
-    .about-content .about-two {
-        width: 30vw;
-    }
-}
-
-/* Small (576px и больше) */
-@media (min-width: 576px) and (max-width: 767.98px) {
-
-    .headerline .mainbutton img {
-        height: 0px;
-        width: 0px;
-    }
-
-    .headerline .other-buttons {
-        gap: 15px;
-        justify-content: center;
-    }
-
-    .other-buttons a {
-        padding: 10px 4%;
-        font-size: 0.9rem;
-    }
-
-    
-    .main-content {
-        width: 85%;
-    }
-
-    .get-started h1 {
-        font-size: 24px;
-    }
-
-    .get-started p {
-        font-size: 16px;
-    }
-
-    .get-started-button a {
-        font-size: 15px;
-    }
-
-    .footerline {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .block{
-        grid-template-columns: repeat(1,1fr);
-    }
-    .update-content{
-        left: -7vw;
-    }
-    .about-content {
-        margin-left: 10vw;
-        width: 80vw;
-    }
-    .about-content .about-one {
-        width: 30vw;
-    }
-    .about-content .about-two {
-        width: 30vw;
-    }
-}
-
-/* Medium (768px и больше) */
-@media (min-width: 768px) and (max-width: 991.98px) {
-    .headerline .other-buttons {
-        gap: 20px;
-    }
-
-    .other-buttons a {
-        padding: 12px 5%;
-        font-size: 1rem;
-    }
-
-    .main-content {
-        width: 80%;
-    }
-
-    .get-started h1 {
-        font-size: 26px;
-    }
-
-    .get-started p {
-        font-size: 18px;
-    }
-
-    .get-started-button a {
-        font-size: 16px;
-    }
-
-    .footerline {
-        grid-template-columns: repeat(3, 1fr);
-    }
-    .block{
-        grid-template-columns: repeat(1,1fr);
-        margin-left:   10px;
-    }
-    .update-content{
-        left: -4vw;}
-    .about-content {
-        margin-left: 10vw;
-        width: 70vw;
-    }
-    .about-content .about-one {
-        width: 28vw;
-    }
-    .about-content .about-two {
-        width: 28vw;
-    }
-}
-
-/* Large (992px и больше) */
-@media (min-width: 992px) and (max-width: 1199.98px) {
-
-    .headerline .other-buttons {
-        gap: 25px;
-    }
-
-    .other-buttons a {
-        padding: 14px 6%;
-        font-size: 1.1rem;
-    }
-
-    .main-content {
-        width: 75%;
-    }
-
-    .get-started h1 {
-        font-size: 28px;
-    }
-
-    .get-started p {
-        font-size: 18px;
-    }
-
-    .get-started-button a {
-        font-size: 16px;
-    }
-
-    .footerline {
-        grid-template-columns: repeat(4, 1fr);
-    }
-    .update-content{
-        margin-right: 10vh;
-    }
-    .block{
-        grid-template-columns: repeat(2,1fr);
-    }
-    .about-content {
-        margin-left: 10vw;
-        width: 70vw;
-    }
-    .about-content .about-one {
-        width: 30vw;
-    }
-    .about-content .about-two {
-        width: 30vw;
-    }
-    
-}
-
-/* Extra large (1200px и больше) */
-@media (min-width: 1200px) and (max-width: 1399.98px) {
-
-    .other-buttons a {
-        padding: 15px 7%;
-        font-size: 1.2rem;
-    }
-
-    .main-content {
-        width: 70%;
-    }
-
-    .get-started h1 {
-        font-size: 30px;
-    }
-
-    .get-started p {
-        font-size: 20px;
-    }
-
-    .get-started-button a {
-        font-size: 18px;
-    }
-    .block{
-        grid-template-columns: repeat(2,1fr);
-    }
-    .about-content {
-        margin-left: 10vw;
-        width: 80vw;
-    }
-    .about-content .about-one {
-        width: 35vw;
-    }
-    .about-content .about-two {
-        width: 35vw;
-    }
-}
-
-/* Extra extra large (1400px и больше) */
-@media (min-width: 1400px) {
-
-    .other-buttons a {
-        padding: 16px 8%;
-        font-size: 1.3rem;
-    }
-
-    .main-content {
-        width: 65%;
-    }
-
-    .get-started h1 {
-        font-size: 32px;
-    }
-
-    .get-started p {
-        font-size: 20px;
-    }
-
-    .get-started-button a {
-        font-size: 18px;
-    }
-    .block{
-        grid-template-columns: repeat(2,1fr);
-    }
-    .about-content {
-        margin-left: 10vw;
-        width: 80vw;
-    }
-
-    .about-content .about-one {
-
-    }
-    .about-content .about-two {
-
-    }
-}
-
-
 .update-content{
     position: relative;
-    margin-top: 10vh;
+    /* margin-top: 10vh;
     margin-left: 10vh;
-    margin-right: 10vh;
+    margin-right: 10vh; */
     height: 65vh;
     width: 87%; 
-    max-width: 1350px; 
-    min-width: 300px;  
+    min-width: 300px;
+    /* max-width: 1350px;  */
+    /* min-width: 300px;   */
     background-color: #fff;
     border-radius: 50px;
     box-shadow: 5px 5px 20px rgb(189, 155, 221);
@@ -866,4 +543,350 @@ body {
     text-align: center;
     padding: 1vh;
     
+}
+
+/* Анимация вращения */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Скрытие лоадера после загрузки страницы */
+.loader.hidden {
+    visibility: hidden;
+    opacity: 0;
+}
+/* Основные стили остаются без изменений */
+
+/* Extra small (меньше 576px) */
+@media (max-width: 575.98px) {
+    .headerline {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+        padding: 10px;
+    }
+
+    .headerline .mainbutton img {
+        height: 0px;
+        width: 0px;
+    }
+
+    .headerline .other-buttons {
+        flex-wrap: wrap; /* Разрешаем перенос кнопок */
+        gap: 10px; /* Уменьшаем расстояние между кнопками */
+        justify-content: center; /* Центрируем кнопки */
+    }
+
+    .other-buttons a {
+        padding: 8px 5%;
+        font-size: 0.85rem;
+    }
+    .main-content {
+        margin: 5vh auto;
+        width: 90%;
+        padding: 15px;
+    }
+
+    .get-started h1 {
+        font-size: 22px;
+    }
+
+    .get-started p {
+        font-size: 14px;
+    }
+
+    .get-started-button a {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .footerline {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        padding: 10px;
+    }
+    .infdate p {
+        font-size: 15px;
+        padding-top: 5px;
+        
+    }
+    .inftext p {
+        font-size: 15px;
+        padding-top: 5px;
+    
+    }
+    .update-content{
+        margin-top: 10vh;
+        margin-left: 1.5vh;
+        margin-right: 1.5vh;
+        
+    }
+    .block{
+       
+       grid-template-columns: repeat(1,1fr);
+    }
+    .about-content {
+        margin-left: 10vw;
+        width: 80vw;
+    }
+    .about-content .about-one {
+        width: 30vw;
+    }
+    .about-content .about-two {
+        width: 30vw;
+    }
+}
+
+/* Small (576px и больше) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+
+    .headerline .mainbutton img {
+        height: 0px;
+        width: 0px;
+    }
+
+    .headerline .other-buttons {
+        gap: 15px;
+        justify-content: center;
+    }
+
+    .other-buttons a {
+        padding: 10px 4%;
+        font-size: 0.9rem;
+    }
+
+    
+    .main-content {
+        width: 85%;
+    }
+
+    .get-started h1 {
+        font-size: 24px;
+    }
+
+    .get-started p {
+        font-size: 16px;
+    }
+
+    .get-started-button a {
+        font-size: 15px;
+    }
+
+    .footerline {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .block{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .update-content{
+        left: -7vw;
+        margin-top: 10vh;
+        margin-left: 10vh;
+        margin-right: 10vh; 
+    }
+    .about-content {
+        margin-left: 10vw;
+        width: 80vw;
+    }
+    .about-content .about-one {
+        width: 30vw;
+    }
+    .about-content .about-two {
+        width: 30vw;
+    }
+}
+
+/* Medium (768px и больше) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .headerline .other-buttons {
+        gap: 20px;
+    }
+
+    .other-buttons a {
+        padding: 12px 5%;
+        font-size: 1rem;
+    }
+
+    .main-content {
+        width: 80%;
+    }
+
+    .get-started h1 {
+        font-size: 26px;
+    }
+
+    .get-started p {
+        font-size: 18px;
+    }
+
+    .get-started-button a {
+        font-size: 16px;
+    }
+
+    .footerline {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .block{
+        grid-template-columns: repeat(1,1fr);
+        margin-left:   10px;
+    }
+    .update-content{
+        left: -4vw;
+        margin-top: 10vh;
+        margin-left: 10vh;
+        margin-right: 10vh;
+     }
+    .about-content {
+        margin-left: 10vw;
+        width: 70vw;
+    }
+    .about-content .about-one {
+        width: 28vw;
+    }
+    .about-content .about-two {
+        width: 28vw;
+    }
+}
+
+/* Large (992px и больше) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+
+    .headerline .other-buttons {
+        gap: 25px;
+    }
+
+    .other-buttons a {
+        padding: 14px 6%;
+        font-size: 1.1rem;
+    }
+
+    .main-content {
+        width: 75%;
+    }
+
+    .get-started h1 {
+        font-size: 28px;
+    }
+
+    .get-started p {
+        font-size: 18px;
+    }
+
+    .get-started-button a {
+        font-size: 16px;
+    }
+
+    .footerline {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .update-content{
+        margin-right: 10vh;
+    }
+    .block{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .update-content{
+        margin-top: 10vh;
+        margin-left: 10vh;
+        margin-right: 10vh; 
+    }
+    .about-content {
+        margin-left: 10vw;
+        width: 70vw;
+    }
+    .about-content .about-one {
+        width: 30vw;
+    }
+    .about-content .about-two {
+        width: 30vw;
+    }
+    
+}
+
+/* Extra large (1200px и больше) */
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+
+    .other-buttons a {
+        padding: 15px 7%;
+        font-size: 1.2rem;
+    }
+
+    .main-content {
+        width: 70%;
+    }
+
+    .get-started h1 {
+        font-size: 30px;
+    }
+
+    .get-started p {
+        font-size: 20px;
+    }
+
+    .get-started-button a {
+        font-size: 18px;
+    }
+    .block{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .update-content{
+        margin-top: 10vh;
+        margin-left: 10vh;
+        margin-right: 10vh;
+    }
+    .about-content {
+        margin-left: 10vw;
+        width: 80vw;
+    }
+    .about-content .about-one {
+        width: 35vw;
+    }
+    .about-content .about-two {
+        width: 35vw;
+    }
+}
+
+/* Extra extra large (1400px и больше) */
+@media (min-width: 1400px) {
+
+    .other-buttons a {
+        padding: 16px 8%;
+        font-size: 1.3rem;
+    }
+
+    .main-content {
+        width: 65%;
+    }
+
+    .get-started h1 {
+        font-size: 32px;
+    }
+
+    .get-started p {
+        font-size: 20px;
+    }
+
+    .get-started-button a {
+        font-size: 18px;
+    }
+    .block{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .update-content{
+        margin-top: 10vh;
+        margin-left: 10vh;
+        margin-right: 10vh;
+    }
+    .about-content {
+        margin-left: 10vw;
+        width: 80vw;
+    }
+
+    .about-content .about-one {
+
+    }
+    .about-content .about-two {
+
+    }
 }
